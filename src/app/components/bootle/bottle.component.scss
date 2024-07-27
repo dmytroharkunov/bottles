@@ -1,0 +1,44 @@
+.bottle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: solid 1px black;
+  border-radius:  0 0 100px 100px;
+  padding: 10px;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.selected {
+    border-color: darkred;
+    border-width: 3px;
+  }
+
+  &.empty:hover {
+    animation: shake-animation 1s ease-in;
+  }
+}
+
+.layer {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+}
+
+@keyframes shake-animation {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

@@ -1,0 +1,14 @@
+<div
+  class="bottle"
+  [class.selected]="selectedId === bottle.id"
+  [class.empty]="!bottle.layers.length"
+  (click)="onBottleClick(bottle.id)"
+>
+  @for (layer of bottle.layers; track layer) {
+    <div
+      class="layer"
+      [style.background-color]="layer.colorCode"
+    >
+    </div>
+  }
+</div>

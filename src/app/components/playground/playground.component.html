@@ -1,0 +1,11 @@
+<div class="bottles">
+  @for (bottle of bottles; track bottle) {
+    <div>
+      <app-bottle
+        [selectedId]="selectedId"
+        [bottle]="bottle"
+        (bottleClick)="bottleClick($event)"
+      />
+    </div>
+  }
+</div>
